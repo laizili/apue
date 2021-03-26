@@ -51,6 +51,16 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# python
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
 # 我的配置
-.idea
-cmake-build-debug
+.idea/
+cmake-build-debug/
+cmake-build-debug-coverage/
+build/

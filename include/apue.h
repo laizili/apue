@@ -5,7 +5,7 @@
 #ifndef UNIXPROG_INCLUDE_APUE_H_
 #define UNIXPROG_INCLUDE_APUE_H_
 
-#define _POSIX_C_SOURCE 200809L
+#define _POSIX_C_SOURCE 200809L  // FEATURE TEST MACRO 功能測試宏
 
 #include <stddef.h>  // for offsetof
 // for convenience
