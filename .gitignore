@@ -53,4 +53,5 @@ dkms.conf
 
 # 我的配置
 .idea
-cmake-build-debug
+cmake-build-debug/
+build/

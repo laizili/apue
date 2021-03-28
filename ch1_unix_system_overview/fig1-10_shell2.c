@@ -22,24 +22,26 @@ int main(int argc, char *argv[]) {
   while (fgets(buf, MAXLINE, stdin) != NULL) {
     ulong_t rn = strlen(buf);
     if (buf[rn - 1] == '\n') {
-      buf[rn - 1] = '\0'; // 命令以nul字符结尾
+      buf[rn - 1] = '\0'; // 命令字符串以nul字符结尾
     }
     if ((pid = fork()) < 0) {
       err_sys("fork error");
     } else if (pid == 0) { // child process
       execlp(buf, buf, NULL);
       err_ret("can't execute %s", buf);
-      exit(127); // child process terminate
+      _exit(127); // child process terminate
     }
     // parent process: wait for child process to terminate and then print prompt
     if ((pid = waitpid(pid, NULL, 0)) < 0) {
       err_sys("wait_pid error");
     }
     printf("%% ");
+    fflush(stdout);
   }
   return 0;
 }
 
 void sig_int(int signo) {
   printf("interrupt\n%% ");
+  fflush(stdout);
 }

@@ -1,1 +1,1 @@
-include(../cmake_template.txt)
+include(../cmake_template.cmake)

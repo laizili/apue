@@ -28,13 +28,14 @@ int main(int argc, char *argv[]) {
     } else if (pid == 0) { // child process
       execlp(buf, buf, NULL);
       err_ret("can't execute %s", buf);
-      exit(127); // child process terminate
+      _exit(127); // child process terminate
     }
     // parent process: wait for child process to terminate and then print prompt
     if ((pid = waitpid(pid, NULL, 0)) < 0) {
       err_sys("wait_pid error");
     }
     printf("%% ");
+    fflush(stdin);
   }
   return 0;
 }
