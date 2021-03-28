@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf8 -*-
 from utils import csv_reader
 from io import FileIO
 import sys
@@ -9,7 +10,7 @@ if __name__ == "__main__":
         exit(1)
     with FileIO(sys.argv[3], "wb") as out:
         header = \
-r"""/*
+            r"""/*
  *This file was created by python script, don't modify this file directly.
  */
 #include "apue.h"
@@ -24,7 +25,7 @@ int main(int argc, char **argv){
     }
 """
         template_sysconf_defector = \
-r"""
+            r"""
 #ifdef {0}
     printf("{0} defined to be %ld\n", (long){0} + 0);
 #else
@@ -43,7 +44,7 @@ r"""
             fragment.append(template_sysconf_defector.format(row[0], row[1]))
 
         template_pathconf_defector = \
-r"""
+            r"""
 #ifdef {0}
     printf("{0} defined to be %ld\n", (long){0} + 0);
 #else
@@ -60,7 +61,7 @@ r"""
             fragment.append(template_pathconf_defector.format(row[0], row[1]))
         body = "".join(fragment)
         footer = \
-r"""}
+            r"""}
 
 static void pr_sysconf(char *mesg, int name)
 {
@@ -102,4 +103,4 @@ static void pr_pathconf(char *mesg, char *path, int name)
 }
 """
         out.write((header + body + footer).encode("utf8"))
-        print( sys.argv[3] + "源文件构建完成")
+        print(sys.argv[3] + "源文件构建完成")

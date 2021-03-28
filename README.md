@@ -4,6 +4,7 @@
     2. IDE: CLION
     3. Toolchains: cygwin
     4. CMAKE 3.17
+    5. Python 3.x.x
 [toc]
 ### APUE.3E 书籍源码
 #### lib目录, 各章文件依赖的静态库文件(libapue.a)
