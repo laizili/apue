@@ -64,7 +64,7 @@ void err_cont(int error, const char *fmt, ...) {
 }
 /**
  * Fatal error unrelated to a system call.
- * Print a message ad terminate.
+ * Print a message and terminate.
  */
 void err_quit(const char *fmt, ...) {
   va_list ap;

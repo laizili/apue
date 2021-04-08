@@ -5,6 +5,10 @@
 #ifndef UNIXPROG_INCLUDE_APUE_H_
 #define UNIXPROG_INCLUDE_APUE_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define _POSIX_C_SOURCE 200809L  // FEATURE TEST MACRO 功能測試宏
 
 #include <stddef.h>  // for offsetof
@@ -14,7 +18,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <signal.h> // for SIG_ERR
-
+#include <fcntl.h>
+#include <sys/stat.h>
 #define MAXLINE 4096  /* max line length, 每行最大字符数量*/
 
 /*
@@ -27,7 +32,6 @@
  */
 #define DIR_MODE (FILE_MODE | S_IXUSR | S_IXGRP | S_IXOTH) /*新文件夹的默认访问权限*/
 
-
 typedef void Sigfunc(int); /*for signal handler, 信号处理函数*/
 
 #define max(a, b) ((a) > (b) ? (a) : (b))
@@ -35,9 +39,19 @@ typedef void Sigfunc(int); /*for signal handler, 信号处理函数*/
 
 /*
  * prototypes for our own functions
- * 我们自己的定义的函数原型
+ *
  */
 
+// 第二章引入的库函数
+char *path_alloc(size_t *sz);  /*Figure 2.16*/
+long open_max(void);     /*Figure 2.17*/
+
+// 第三章引入的库函数
+int set_cloexec(int fd);   /* Figure 13.9 */
+void clr_fl(int fd, int flags);   /* Figure 3.12 */
+void set_fl(int fd, int flags);
+// 打印文件状态标志
+void pr_file_status_flag(int fd);
 // TODO 每一节章节定义的函数
 
 /*
@@ -62,4 +76,7 @@ void err_sys(const char *, ...) __attribute__((noreturn));
 
 //用于守护进程的出错处理函数
 
+#ifdef __cplusplus
+}
+#endif //  END extern "C"
 #endif //UNIXPROG_INCLUDE_APUE_H_
