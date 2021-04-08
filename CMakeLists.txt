@@ -11,3 +11,5 @@ add_subdirectory(lib)
 add_subdirectory(ch1_unix_system_overview)
 # 第二章 unix标准及实现
 add_subdirectory(ch2_unix_standardization_and_implementations)
+# 第三章 文件IO
+add_subdirectory(ch3_fileio)
