@@ -13,6 +13,6 @@
 #### 2. ch2_standards 第二章 UNIX标准及实现
 > 介绍了 C语言标准、UNIX标准 及 不同OS厂商对标准实现差异等
 #### 3. ch3_fileio 第三章 文件IO
-> 介绍了文件的打开、读取、关闭及与文件描述符操作相关的函数(`open/read/close/fcntl`)；
-> 文件同步函数(`sync/fsync/fdatasync`)，将写到缓冲区的内容同步到磁盘中.
+>1. 介绍了文件的打开、读取、写入、关闭及与文件描述符操作相关的函数(`open/read/write/close/fcntl`)；
 > 
+>2. 文件同步函数(`sync/fsync/fdatasync`)，将写到内存缓冲区的内容同步到磁盘中.
