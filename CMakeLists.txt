@@ -13,3 +13,5 @@ add_subdirectory(ch1_unix_system_overview)
 add_subdirectory(ch2_unix_standardization_and_implementations)
 # 第三章 文件IO
 add_subdirectory(ch3_fileio)
+# 第四章 文件和目录
+add_subdirectory(ch4_file_and_directory)

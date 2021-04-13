@@ -13,6 +13,7 @@ extern "C" {
 
 #include <stddef.h>  // for offsetof
 // for convenience
+#include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
