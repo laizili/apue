@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
   printf("FIFOS          = %7ld, %5.2f %%\n", nfifo, nfifo * 100.0 / ntot);
   printf("symbolic links = %7ld, %5.2f %%\n", nslink, nslink * 100.0 / ntot);
   printf("sockets        = %7ld, %5.2f %%\n", nsock, nsock * 100.0 / ntot);
-  return 0;
+  return ret;
 }
 // contains the full pathname for every file(遍历目录树过程中：相对于遍历起点目录的文件路径)
 static char *fullpath;

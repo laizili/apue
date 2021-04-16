@@ -3,7 +3,7 @@ project(unixprog C)
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED True)
-set(CMAKE_C_FLAGS "-Wall")
+set(CMAKE_C_FLAGS "-Wall -Werror")
 # 静态库文件
 add_subdirectory(lib)
 
@@ -15,3 +15,5 @@ add_subdirectory(ch2_unix_standardization_and_implementations)
 add_subdirectory(ch3_fileio)
 # 第四章 文件和目录
 add_subdirectory(ch4_file_and_directory)
+# 第五章 标准I/O库
+add_subdirectory(ch5_stdio)
