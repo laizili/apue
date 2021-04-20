@@ -21,8 +21,8 @@ int main(int argc, char *argv[]) {
       continue;
     }
     printf("service name: %s\n", pserv->s_name);
-    printf("\tport: %hd\n", htons(pserv->s_port)); /* pserv执行的结构中，端口号的存储以网络字节序（big-endian）存储,
-  转换为主机序（little-endian） */
+    printf("\tport: %hd\n", htons(pserv->s_port)); /* pserv指向的结构体对象中，端口号（s_port）以网络字节序（big-endian）存储,
+  转换为主机序（little-endian）,以正确显示 */
     printf("service aliases: ");
     for (const char *aname = (*pserv->s_aliases); aname != NULL; ++aname) {
       printf("%s ", aname);
