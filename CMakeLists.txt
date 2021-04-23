@@ -17,5 +17,7 @@ add_subdirectory(ch3_fileio)
 add_subdirectory(ch4_file_and_directory)
 # 第五章 标准I/O库
 add_subdirectory(ch5_stdio)
-# 第六章 系统文件和信息
+# 第六章 系统数据文件和信息
 add_subdirectory(ch6_sysdata)
+# 第七章 进程环境
+add_subdirectory(ch7_procenv)
