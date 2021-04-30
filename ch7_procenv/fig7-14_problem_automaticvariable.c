@@ -1,5 +1,5 @@
 /**
- * Filename: fig7_14-problem_automaticvariable.c
+ * Filename: fig7-14_problem_automaticvariable.c
  * Author:   csbonkers
  * Contact:  csbonkers@mail.ynu.edu.cn
  * Date:     4/23/21

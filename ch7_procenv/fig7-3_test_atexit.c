@@ -1,5 +1,5 @@
 /**
- * Filename: ch7-3_test_atexit.c
+ * Filename: fig7-3_test_atexit.c
  * Author:   csbonkers
  * Contact:  csbonkers@mail.ynu.edu.cn
  * Date:     4/23/21

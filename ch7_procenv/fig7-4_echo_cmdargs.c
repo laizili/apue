@@ -1,10 +1,10 @@
 /**
- * Filename: fig7_4-echo_cmdargs.c
+ * Filename: fig7-4_echo_cmdargs.c
  * Author:   csbonkers
  * Contact:  csbonkers@mail.ynu.edu.cn
  * Date:     4/23/21
  * Description:
- * 
+ *     打印所有命令行参数
  */
 #include "apue.h"
 
