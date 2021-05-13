@@ -53,6 +53,8 @@ void clr_fl(int fd, int flags);   /* Figure 3.12 */
 void set_fl(int fd, int flags);
 // 打印文件状态标志
 void pr_file_status_flag(int fd);
+// 打印exit状态说明
+void pr_exit(int status);
 // TODO 每一节章节定义的函数
 
 /*
@@ -77,6 +79,13 @@ void err_sys(const char *, ...) __attribute__((noreturn));
 
 //用于守护进程的出错处理函数
 
+
+// parent/child from section 8.9
+void TELLWAIT();
+void TELL_PARENT(pid_t pid);
+void TELL_CHILD(pid_t pid);
+void WAIT_PARENT();
+void WAIT_CHILD();
 #ifdef __cplusplus
 }
 #endif //  END extern "C"

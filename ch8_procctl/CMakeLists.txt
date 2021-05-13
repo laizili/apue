@@ -1,0 +1,5 @@
+add_compile_definitions(${CMAKE_SYSTEM_NAME} HAS_AXSIG HAS_ACORE)
+include(../cmake_template.cmake)
+set(MISC "${CMAKE_SOURCE_DIR}/tool/")
+file(COPY ${MISC}/fig7-4_echo_cmdargs ${MISC}/fig8-17_echoall ${MISC}/testinterp DESTINATION /tmp)
+file(CHMOD /tmp/testinterp PERMISSIONS OWNER_EXECUTE)

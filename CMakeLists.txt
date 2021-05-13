@@ -21,3 +21,5 @@ add_subdirectory(ch5_stdio)
 add_subdirectory(ch6_sysdata)
 # 第七章 进程环境
 add_subdirectory(ch7_procenv)
+# 第八章 进程控制
+add_subdirectory(ch8_procctl)
